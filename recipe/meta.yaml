@@ -1,4 +1,4 @@
-{% set version = '1.0.8' %}
+{% set version = "1.0.9" %}
 
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
@@ -13,11 +13,11 @@ source:
     - https://cran.r-project.org/src/contrib/squash_{{ version }}.tar.gz
     - https://cran.r-project.org/src/contrib/Archive/squash/squash_{{ version }}.tar.gz
 
-  sha256: e6932c0a461d5c85f7180a31d18a3eb4f28afd6769efe251075a4de12de039f4
+  sha256: ff381c85071e3407574e3db28d789657f64e7d3f9d74ac123539de22ab8ac6f4
 
 build:
   noarch: generic
-  number: 1002
+  number: 0
 
   rpaths:
     - lib/R/lib/
