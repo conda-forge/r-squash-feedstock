@@ -5,7 +5,7 @@ Home: https://cran.r-project.org/web/packages/squash/index.html
 
 Package license: Artistic-2.0
 
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-squash-feedstock/blob/master/LICENSE.txt)
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-squash-feedstock/blob/main/LICENSE.txt)
 
 Summary: Functions for color-based visualization of multivariate data, i.e. colorgrams or heatmaps.  Lower-level functions  map numeric values to colors, display a matrix as an array of colors, and draw color keys.  Higher-level plotting functions generate a bivariate histogram, a dendrogram aligned with a color-coded matrix, a triangular distance matrix, and more.
 
@@ -15,8 +15,8 @@ Current build status
 
 <table><tr><td>All platforms:</td>
     <td>
-      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=1669&branchName=master">
-        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/r-squash-feedstock?branchName=master">
+      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=1669&branchName=main">
+        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/r-squash-feedstock?branchName=main">
       </a>
     </td>
   </tr>
@@ -39,23 +39,49 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `r-squash` can be installed with:
+Once the `conda-forge` channel has been enabled, `r-squash` can be installed with `conda`:
 
 ```
 conda install r-squash
 ```
 
-It is possible to list all of the versions of `r-squash` available on your platform with:
+or with `mamba`:
+
+```
+mamba install r-squash
+```
+
+It is possible to list all of the versions of `r-squash` available on your platform with `conda`:
 
 ```
 conda search r-squash --channel conda-forge
+```
+
+or with `mamba`:
+
+```
+mamba search r-squash --channel conda-forge
+```
+
+Alternatively, `mamba repoquery` may provide more information:
+
+```
+# Search all versions available on your platform:
+mamba repoquery search r-squash --channel conda-forge
+
+# List packages depending on `r-squash`:
+mamba repoquery whoneeds r-squash --channel conda-forge
+
+# List dependencies of `r-squash`:
+mamba repoquery depends r-squash --channel conda-forge
 ```
 
 
 About conda-forge
 =================
 
-[![Powered by NumFOCUS](https://img.shields.io/badge/powered%20by-NumFOCUS-orange.svg?style=flat&colorA=E1523D&colorB=007D8A)](http://numfocus.org)
+[![Powered by
+NumFOCUS](https://img.shields.io/badge/powered%20by-NumFOCUS-orange.svg?style=flat&colorA=E1523D&colorB=007D8A)](https://numfocus.org)
 
 conda-forge is a community-led conda channel of installable packages.
 In order to provide high-quality builds, the process has been automated into the
@@ -65,10 +91,12 @@ for each of the installable packages. Such a repository is known as a *feedstock
 A feedstock is made up of a conda recipe (the instructions on what and how to build
 the package) and the necessary configurations for automatic building using freely
 available continuous integration services. Thanks to the awesome service provided by
-[CircleCI](https://circleci.com/), [AppVeyor](https://www.appveyor.com/)
-and [TravisCI](https://travis-ci.com/) it is possible to build and upload installable
-packages to the [conda-forge](https://anaconda.org/conda-forge)
-[Anaconda-Cloud](https://anaconda.org/) channel for Linux, Windows and OSX respectively.
+[Azure](https://azure.microsoft.com/en-us/services/devops/), [GitHub](https://github.com/),
+[CircleCI](https://circleci.com/), [AppVeyor](https://www.appveyor.com/),
+[Drone](https://cloud.drone.io/welcome), and [TravisCI](https://travis-ci.com/)
+it is possible to build and upload installable packages to the
+[conda-forge](https://anaconda.org/conda-forge) [Anaconda-Cloud](https://anaconda.org/)
+channel for Linux, Windows and OSX respectively.
 
 To manage the continuous integration and simplify feedstock maintenance
 [conda-smithy](https://github.com/conda-forge/conda-smithy) has been developed.
