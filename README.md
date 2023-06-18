@@ -1,11 +1,11 @@
-About r-squash
-==============
+About r-squash-feedstock
+========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-squash-feedstock/blob/main/LICENSE.txt)
 
 Home: https://cran.r-project.org/web/packages/squash/index.html
 
 Package license: Artistic-2.0
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-squash-feedstock/blob/main/LICENSE.txt)
 
 Summary: Functions for color-based visualization of multivariate data, i.e. colorgrams or heatmaps.  Lower-level functions  map numeric values to colors, display a matrix as an array of colors, and draw color keys.  Higher-level plotting functions generate a bivariate histogram, a dendrogram aligned with a color-coded matrix, a triangular distance matrix, and more.
 
